@@ -1,2 +1,2 @@
-// Export default to provide support for non-ES6 solutions
-module.exports = require('./js/CheckboxTree').default;
+import _CheckboxTree from "./js/CheckboxTree";
+export { _CheckboxTree as CheckboxTree } from './js/CheckboxTree';

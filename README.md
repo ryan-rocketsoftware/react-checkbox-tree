@@ -1,30 +1,51 @@
-# react-checkbox-tree
+# newton-checkbox-tree
 
-[![npm](https://img.shields.io/npm/v/react-checkbox-tree.svg?style=flat-square)](https://www.npmjs.com/package/react-checkbox-tree)
-[![Build Status](https://img.shields.io/travis/jakezatecky/react-checkbox-tree/master.svg?style=flat-square)](https://travis-ci.org/jakezatecky/react-checkbox-tree)
-[![Dependency Status](https://img.shields.io/david/jakezatecky/react-checkbox-tree.svg?style=flat-square)](https://david-dm.org/jakezatecky/react-checkbox-tree)
-[![devDependency Status](https://david-dm.org/jakezatecky/react-checkbox-tree/dev-status.svg?style=flat-square)](https://david-dm.org/jakezatecky/react-checkbox-tree?type=dev)
-[![Greenkeeper badge](https://badges.greenkeeper.io/jakezatecky/react-checkbox-tree.svg?style=flat-square)](https://greenkeeper.io/)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/jakezatecky/react-checkbox-tree/master/LICENSE.txt)
+## Overview
 
-> A simple and elegant checkbox tree for React.
+This library is a fork of react-checkbox-tree. This forked version has numerous changes from the origional sourced repository.
+The build, test and serve process and tasks are all new and updated to modern tooling and practices using Parcel, Jest, Enzyme
+and Babel.
 
-![Demo](demo.gif)
+The origional version had a complicated build process using Gulp, Ruby Gem's along with other depenedencies which made it 
+difficult to add enhancements and new functionality. This version is extrememly simple to build, test and run.
+
+Lastly, this library will be implemented within the Newton Common Components library and a name change is most likely to happen.
+Unitl then you can add new functionality, tests and styles with your pull requests. 
+
 
 ## Usage
 
-### Installation
+### Setup Development Environment
 
-Install the library using your favorite dependency manager:
+Quick overview for getting your local development environment setup for development, browsing and publishing. Below are
+a few of the major commands needed to get started.
+
+### COMMANDS ###
+`build` - Bundle the component for production
+`start:dev` - Run the demo in the browser with original source
+`start:prod` - Run the demo in the browser with production bundle
+`start:examples:*` - Run specified demo in the browser. Replace the * with the name of the demo.
+`test` - Run all tests
+`test:details` - Run all tests with details
+`test:coverage` - Run all tests with code coverage
+`test:snapshot:cleanup` - Remove old outdated snapshots prior to running tests
+
+
+### TODO ###
+
+Eventually this library will be availablke via NPM registry. The commands below are just examples on how to install this 
+library once its setup. It doesnt work yet.
+
+Using yarn:
 
 ```
-yarn add react-checkbox-tree
+yarn add @nwtn/common-components/react-checkbox-tree
 ```
 
 Using npm:
 
 ```
-npm install react-checkbox-tree --save
+npm install @nwtn/common-components/react-checkbox-tree --save
 ```
 
 > **Note** &ndash; This library makes use of [Font Awesome](http://fontawesome.io/) styles and expects them to be loaded in the browser.
@@ -34,14 +55,14 @@ npm install react-checkbox-tree --save
 
 For your convenience, the library's styles can be consumed utilizing one of the following files:
 
-* `node_modules/react-checkbox-tree/lib/react-checkbox-tree.css`
-* `node_modules/react-checkbox-tree/src/less/react-checkbox-tree.less`
-* `node_modules/react-checkbox-tree/src/scss/react-checkbox-tree.scss`
+* `node_modules/@nwtn/common-components/react-checkbox-tree/lib/react-checkbox-tree.css`
+* `node_modules/@nwtn/common-components/react-checkbox-tree/src/less/react-checkbox-tree.less`
+* `node_modules/@nwtn/common-components/react-checkbox-tree/src/scss/react-checkbox-tree.scss`
 
 Either include one of these files in your stylesheets or utilize a CSS loader:
 
 ``` javascript
-import 'react-checkbox-tree/lib/react-checkbox-tree.css';
+import '@nwtn/common-components/react-checkbox-tree/lib/react-checkbox-tree.css';
 ```
 
 
@@ -51,7 +72,7 @@ A quick usage example is included below. Note that the react-checkbox-tree compo
 
 ``` jsx
 import React from 'react';
-import CheckboxTree from 'react-checkbox-tree';
+import CheckboxTree from '@nwtn/common-components/react-checkbox-tree';
 
 const nodes = [{
     value: 'mars',

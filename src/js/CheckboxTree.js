@@ -222,6 +222,8 @@ class CheckboxTree extends React.Component {
 
             // Show checkbox only if this is a leaf node or showCheckbox is true
             const showCheckbox = onlyLeafCheckboxes ? flatNode.isLeaf : flatNode.showCheckbox;
+            // console.log(onlyLeafCheckboxes);
+            // const showCheckbox = false;
 
             // Render only if parent is expanded or if there is no root parent
             const parentExpanded = parent.value ? model.getNode(parent.value).expanded : true;
@@ -346,3 +348,4 @@ class CheckboxTree extends React.Component {
 }
 
 export default CheckboxTree;
+// export { CheckboxTree };

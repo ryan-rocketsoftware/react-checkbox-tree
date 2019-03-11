@@ -1,4 +1,6 @@
-/.css-compare
+/.cache
 /.idea
-/examples
-/test
+/build
+/dist
+/src/demo
+/src/test

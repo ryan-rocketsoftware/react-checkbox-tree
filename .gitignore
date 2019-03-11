@@ -1,5 +1,6 @@
-/.css-compare
-/examples/dist
+/.cache
+/build
+/dist
 /lib
 /node_modules
 package-lock.json
