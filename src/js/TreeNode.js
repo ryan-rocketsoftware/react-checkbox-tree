@@ -243,9 +243,7 @@ class TreeNode extends React.Component {
     }
 
     renderLabel() {
-        const {
-            label, showCheckbox, showNodeIcon, checked,
-        } = this.props;
+        const { label, showCheckbox, showNodeIcon } = this.props;
         const labelChildren = [
             showNodeIcon ? (
                 <span key={0} className="rct-node-icon">

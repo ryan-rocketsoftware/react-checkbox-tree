@@ -209,3 +209,86 @@ $rct-clickable-focus: rgba($rct-icon-color, .2) !default;
 .rct-icon-collapse-all::before {
   content: "\f146";
 }
+
+/* CUSTOM OVERRIDE STYLES */
+.rct-icon-uncheck::before {
+  background-color: #fff;
+  border: 2px solid #5a6872;
+  box-sizing: border-box;
+  content: '';
+  height: 1.125rem;
+  margin-top: -0.85rem;
+  position: absolute;
+  width: 1.125rem;
+}
+
+.rct-icon-uncheck::after {
+  background: none;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  box-sizing: border-box;
+  content: '';
+  height: 6px;
+  margin-top: -0.58rem;
+  margin-left: 0.25rem;
+  opacity: 0;
+  position: absolute;
+  transform: scale(0) rotate(-45deg);
+  width: 10px;
+  -webkit-transform: scale(0) rotate(-45deg);
+}
+
+.rct-icon-check::before {
+  background-color: #3d70b2;
+  border: 2px solid #5a6872;
+  border-color: #3d70b2;
+  box-sizing: border-box;
+  content: '';
+  height: 1.125rem;
+  margin-top: -0.85rem;
+  position: absolute;
+  width: 1.125rem;
+}
+
+.rct-icon-check::after {
+  background: none;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  box-sizing: border-box;
+  content: '';
+  height: 6px;
+  margin-top: -0.58rem;
+  margin-left: 0.25rem;
+  opacity: 1;
+  position: absolute;
+  transform: scale(1) rotate(-45deg);
+  width: 10px;
+  -webkit-transform: scale(1) rotate(-45deg);
+}
+
+.rct-icon-half-check::before {
+  background-color: #3d70b2;
+  border: 2px solid #5a6872;
+  border-color: #3d70b2;
+  box-sizing: border-box;
+  content: '';
+  height: 1.125rem;
+  margin-top: -0.85rem;
+  position: absolute;
+  width: 1.125rem;
+}
+
+.rct-icon-half-check::after {
+  background: none;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  box-sizing: border-box;
+  content: '';
+  height: 6px;
+  margin-top: -0.58rem;
+  margin-left: 0.25rem;
+  position: absolute;
+  transform: scale(1) rotate(-45deg);
+  width: 10px;
+  -webkit-transform: scale(1) rotate(-45deg);
+}
