@@ -1,15 +1,14 @@
 {
   "presets": [
     "@babel/preset-react",
-    ["@babel/preset-env", {
-      "targets": {
-        "browsers": ["last 2 versions"]
-      }
-    }]
+    ["@babel/preset-env", { "useBuiltIns": "usage" }]
   ],
   "plugins": [
-    ["@babel/plugin-proposal-class-properties", {
-      "loose": false
-    }]
+    "@babel/syntax-object-rest-spread",
+    "@babel/proposal-class-properties",
+    "@babel/syntax-dynamic-import",
+    "@babel/transform-react-jsx",
+    "@babel/transform-modules-commonjs",
+    "@babel/transform-runtime",
   ]
 }
