@@ -21,14 +21,22 @@ Quick overview for getting your local development environment setup for developm
 a few of the major commands needed to get started.
 
 ### COMMANDS ###
-`build` - Bundle the component for production
-`start:dev` - Run the demo in the browser with original source
-`start:prod` - Run the demo in the browser with production bundle
-`start:examples:*` - Run specified demo in the browser. Replace the * with the name of the demo.
-`test` - Run all tests
-`test:details` - Run all tests with details
-`test:coverage` - Run all tests with code coverage
-`test:snapshot:cleanup` - Remove old outdated snapshots prior to running tests
+- `clean` - Removes dist folder
+- `clean:demo` - Removes example dist folder
+- `clean:build` - Removes build folder
+- `build-component` - Bundle the component for production and for demo
+- `build-demo` - Bundle the demo application
+- `start-demo` - Run the demo in the browser
+- `publish-demo` - Deploy the demo to gh-pages branch
+- `view-source-map` - View the depenendency tree and file size
+- `build:main` - Bundle the component for production
+- `start:dev` - Run the demo in the browser with original source
+- `start:prod` - Run the demo in the browser with production bundle
+- `start:examples:*` - Run specified demo in the browser. Replace the * with the name of the demo.
+- `test` - Run all tests
+- `test:details` - Run all tests with details
+- `test:coverage` - Run all tests with code coverage
+- `test:snapshot:cleanup` - Remove old outdated snapshots prior to running tests
 
 
 ### TODO ###
