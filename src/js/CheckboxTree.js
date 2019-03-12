@@ -252,6 +252,7 @@ class CheckboxTree extends React.Component {
                     showIcon={node.showIcon}
                     showNodeIcon={showNodeIcon}
                     title={showNodeTitle ? node.title || node.label : node.title}
+                    category={node.category}
                     treeId={id}
                     value={node.value}
                     onCheck={this.onCheck}

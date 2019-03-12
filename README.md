@@ -200,4 +200,6 @@ Individual nodes within the `nodes` property can have the following structure:
 | `disabled`     | bool   | Whether the node should be disabled.     | `false` |
 | `icon`         | mixed  | A custom icon for the node.              | `null`  |
 | `showCheckbox` | bool   | Whether the node should show a checkbox. | `true`  |
+| `showIcon`     | bool   | Whether the node should show an icon.    | `true`  |
 | `title`        | string | A custom `title` attribute for the node. | `null`  |
+| `category`     | string | The node's category.                     | `null`  |
