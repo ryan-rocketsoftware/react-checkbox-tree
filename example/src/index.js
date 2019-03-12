@@ -132,6 +132,7 @@ class App extends React.Component {
                     showExpandAll
                     onCheck={this.onCheck}
                     onExpand={this.onExpand}
+                    noCascade={true}
                 />
             </div>
         );
