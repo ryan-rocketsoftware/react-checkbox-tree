@@ -33,6 +33,7 @@ class TreeNode extends React.Component {
         expandOnClick: PropTypes.bool,
         icon: PropTypes.node,
         showCheckbox: PropTypes.bool,
+        showIcon: PropTypes.bool,
         title: PropTypes.string,
         onClick: PropTypes.func,
     };
@@ -43,6 +44,7 @@ class TreeNode extends React.Component {
         expandOnClick: false,
         icon: null,
         showCheckbox: true,
+        showIcon: true,
         title: null,
         onClick: () => {},
     };
@@ -243,15 +245,15 @@ class TreeNode extends React.Component {
     }
 
     renderLabel() {
-        const { label, showCheckbox, showNodeIcon } = this.props;
+        const { label, showCheckbox, showIcon, showNodeIcon } = this.props;
         const labelChildren = [
-            showNodeIcon ? (
+            showNodeIcon && showIcon ? (
                 <span key={0} className="rct-node-icon">
                     {this.renderNodeIcon()}
                 </span>
             ) : null,
             <span key={1} className="rct-title">
-                {label}
+                {label} <label className="rct-subtitle">Table</label>
             </span>,
         ];
 

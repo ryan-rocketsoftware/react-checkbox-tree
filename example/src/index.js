@@ -1,90 +1,94 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//import CheckboxTree from '../../src/js/CheckboxTree';
-import CheckboxTree from '../../dist/CheckboxTree';
+import CheckboxTree from '../../src/js/CheckboxTree';
+//import CheckboxTree from '../../dist/CheckboxTree';
 //import CheckboxTree from '@nwtn/newton-checkbox-tree';
 
 import './scss/style.scss';
 
-const nodes = [
-    {
-        value: '/app',
-        label: 'app',
-        children: [
-            {
-                value: '/app/Http',
-                label: 'Http',
-                children: [
-                    {
-                        value: '/app/Http/Controllers',
-                        label: 'Controllers',
-                        children: [{
-                            value: '/app/Http/Controllers/WelcomeController.js',
-                            label: 'WelcomeController.js',
-                        }],
-                    },
-                    {
-                        value: '/app/Http/routes.js',
-                        label: 'routes.js',
-                    },
-                ],
-            },
-            {
-                value: '/app/Providers',
-                label: 'Providers',
-                children: [{
-                    value: '/app/Http/Providers/EventServiceProvider.js',
-                    label: 'EventServiceProvider.js',
-                }],
-            },
-        ],
-    },
-    {
-        value: '/config',
-        label: 'config',
-        children: [
-            {
-                value: '/config/app.js',
-                label: 'app.js',
-            },
-            {
-                value: '/config/database.js',
-                label: 'database.js',
-            },
-        ],
-    },
-    {
-        value: '/public',
-        label: 'public',
-        children: [
-            {
-                value: '/public/assets/',
-                label: 'assets',
-                children: [{
-                    value: '/public/assets/style.css',
-                    label: 'style.css',
-                }],
-            },
-            {
-                value: '/public/index.html',
-                label: 'index.html',
-            },
-        ],
-    },
-    {
-        value: '/.env',
-        label: '.env',
-    },
-    {
-        value: '/.gitignore',
-        label: '.gitignore',
-    },
-    {
-        value: '/README.md',
-        label: 'README.md',
-    },
-];
+const nodes = [{
+    value: 'NWTDB4',
+    label: 'NWTDB4',
+    showIcon: false,
+    children: [{
+        value: 'NWTDB4.NWTTS1',
+        label: 'NWTDB4.NWTTS1',
+        showIcon: false,
+        children: [{
+            value: 'NWT04.NWTTB1',
+            label: 'NWT04.NWTTB1',
+            showIcon: false,
+            children: [{
+                value: 'NWTDB4.NWALS1',
+                label: 'NWTDB4.NWALS1',
+                showIcon: false,
+            }, {
+                value: 'NWT04.NWTSY1',
+                label: 'NWT04.NWTSY1',
+                showIcon: false,
+            }],
+        }],
+    }, {
+        value: 'NWT04.NWTVW2',
+        label: 'NWT04.NWTVW2',
+        showIcon: false,
+        children: [{
+            value: 'NWT04.NWTTB2',
+            label: 'NWT04.NWTTB2',
+            icon: <i className="fa fa-info-circle" />,
+            showCheckbox: false,
+        }, {
+            value: 'NWTDB4.NWALS2',
+            label: 'NWTDB4.NWALS2',
+            icon: <i className="fa fa-info-circle" />,
+            showCheckbox: false,
+        }, {
+            value: 'NWT04.NWTSY2',
+            label: 'NWT04.NWTSY2',
+            icon: <i className="fa fa-info-circle" />,
+            showCheckbox: false,
+        }],
+    }, {
+        value: 'NWTDB4.NWTTS3',
+        label: 'NWTDB4.NWTTS3',
+        showIcon: false,
+        children: [{
+            value: 'NWT04.NWTTB3',
+            label: 'NWT04.NWTTB3',
+            showIcon: false,
+            children: [{
+                value: 'NWTDB4.NWALS3',
+                label: 'NWTDB4.NWALS3',
+                showIcon: false,
+            }, {
+                value: 'NWT04.NWTSY3',
+                label: 'NWT04.NWTSY3',
+                showIcon: false,
+            }],
+        }],
+    }, {
+        value: 'NWT04.NWTVW4',
+        label: 'NWT04.NWTVW4',
+        showIcon: false,
+        children: [{
+            value: 'NWT04.NWTTB4',
+            label: 'NWT04.NWTTB4',
+            icon: <i className="fa fa-info-circle" />,
+            showCheckbox: false,
+        }, {
+            value: 'NWTDB4.NWALS4',
+            label: 'NWTDB4.NWALS4',
+            icon: <i className="fa fa-info-circle" />,
+            showCheckbox: false,
+        }, {
+            value: 'NWT04.NWTSY4',
+            label: 'NWT04.NWTSY4',
+            icon: <i className="fa fa-info-circle" />,
+            showCheckbox: false,
+        }],
+    }],
+}];
 
 class App extends React.Component {
     state = {
@@ -119,14 +123,17 @@ class App extends React.Component {
         const { checked, expanded } = this.state;
 
         return (
-            <CheckboxTree
-                showNodeIcon={true}
-                checked={checked}
-                expanded={expanded}
-                nodes={nodes}
-                onCheck={this.onCheck}
-                onExpand={this.onExpand}
-            />
+            <div className="expand-all-container">
+                <CheckboxTree
+                    showNodeIcon={true}
+                    checked={checked}
+                    expanded={expanded}
+                    nodes={nodes}
+                    showExpandAll
+                    onCheck={this.onCheck}
+                    onExpand={this.onExpand}
+                />
+            </div>
         );
     }
 }

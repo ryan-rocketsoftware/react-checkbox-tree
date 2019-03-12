@@ -1,4 +1,4 @@
-$rct-icon-color: #33c !default;
+$rct-icon-color: #3d70b2 !default;
 $rct-label-hover: rgba($rct-icon-color, .1) !default;
 $rct-label-active: rgba($rct-icon-color, .15) !default;
 $rct-clickable-hover: rgba($rct-icon-color, .1) !default;
@@ -291,4 +291,11 @@ $rct-clickable-focus: rgba($rct-icon-color, .2) !default;
   transform: scale(1) rotate(-45deg);
   width: 10px;
   -webkit-transform: scale(1) rotate(-45deg);
+}
+
+
+.rct-subtitle {
+  margin-left: 10px;
+  font-size: 80%;
+  color: #777;
 }
