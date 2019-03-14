@@ -1,9 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import CheckboxTree from '../../src/js/CheckboxTree';
-import './scss/style.scss';
+import { storiesOf } from '@storybook/react';
+import { text, boolean, number, object } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
+import CheckboxTree from '../js/CheckboxTree';
 
-const nodes = [{
+import '../demo/scss/style.scss';
+
+const nodes2 = [{
     value: 'NWTDB4',
     label: 'NWTDB4',
     category: 'Database',
@@ -103,50 +106,54 @@ const nodes = [{
     }],
 }];
 
-class App extends React.Component {
-    state = {
-        checked: [
-            'NWTDB4',
-            'NWT04.NWTSY1',
-            'NWTDB4.NWALS3',
-            'NWT04.NWTSY3',
-            'NWT04.NWTVW4',
-        ],
-        expanded: [
-            'NWTDB4',
-        ],
-    };
+const state = {
+    checked: [
+        'NWTDB4',
+        'NWT04.NWTSY1',
+        'NWTDB4.NWALS3',
+        'NWT04.NWTSY3',
+        'NWT04.NWTVW4',
+    ],
+    expanded: [
+        'NWTDB4',
+        'NWTDB4.NWTTS1',
+        'NWT04.NWTVW2'
+    ],
+};
 
-    constructor(props) {
-        super(props);
-
-        this.onCheck = this.onCheck.bind(this);
-        this.onExpand = this.onExpand.bind(this);
-    }
-
-    onCheck(checked) {
-        this.setState({ checked });
-    }
-
-    onExpand(expanded) {
-        this.setState({ expanded });
-    }
-
-    render() {
-        const { checked, expanded } = this.state;
-
-        return (
-            <CheckboxTree
-                showNodeIcon={true}
-                checked={checked}
-                expanded={expanded}
-                nodes={nodes}
-                onCheck={this.onCheck}
-                onExpand={this.onExpand}
-                noCascade={true}
-            />
-        );
-    }
+/* let onCheck = (checked) => {
+    console.log('checked', checked);
+    state.checked.push({checked});
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+let onExpand = (expanded) => {
+    console.log('expanded', expanded);
+    state.expanded.push({expanded});
+} */
+
+storiesOf('CheckboxTree', module)
+  .add('basic example', () => {
+
+    const onCheck = action('check');
+    const onExpand = action('expand');
+
+    const showNodeIcon = boolean('showNodeIcon', true);
+    const noCascade = boolean('noCascade', true);
+    const nodes = object('nodes', [{
+        value: 'NWTDB4',
+        label: 'NWTDB4',
+        category: 'Database'
+    }]);
+
+    return (
+        <CheckboxTree
+            showNodeIcon={showNodeIcon}
+            checked={state.checked}
+            expanded={state.expanded}
+            nodes={nodes}
+            onCheck={onCheck}
+            onExpand={onExpand}
+            noCascade={noCascade}
+        />
+    )
+  });

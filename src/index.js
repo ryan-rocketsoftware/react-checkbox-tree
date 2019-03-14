@@ -1,2 +1,3 @@
-//import _CheckboxTree from "./js/CheckboxTree";
-export * from './js/CheckboxTree';
+import CheckboxTree from "./js/CheckboxTree";
+export { CheckboxTree }
+export default { CheckboxTree }
